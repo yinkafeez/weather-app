@@ -33,7 +33,7 @@ export default function App() {
           `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=70bc25d3e4890dca2504be5f7be8fa8c`
         );
         const data = await res.json();
-        // console.log(data);
+
         setGetWeatherData(data);
       }
       getWeatherForecast();

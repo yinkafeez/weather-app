@@ -16,11 +16,13 @@ export default function GetUserLocation({ setUserLocation }) {
             try {
               const response = await fetch(reverseGeocodingApi);
               const data = await response.json();
+              console.log(data);
 
               // Extract the city name from the response
               const cityName =
                 data.results[0]?.components.city ||
-                data.results[0]?.components.town;
+                data.results[0]?.components.town ||
+                data.results[0]?.components.state;
 
               setUserLocation(cityName || "Unknown");
             } catch (error) {
