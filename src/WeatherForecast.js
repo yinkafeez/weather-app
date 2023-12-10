@@ -69,7 +69,7 @@ export default function WeatherForecast({ getWeatherData, cityName, isOpen }) {
           </div>
         </div>
       )}
-      {cityName.length < 2 && (
+      {cityName.length <= 2 && (
         <div className="error">
           <p> Please provide a valid City Name </p>
         </div>
