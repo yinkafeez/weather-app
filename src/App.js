@@ -30,7 +30,7 @@ export default function App() {
       setIsOpen(true);
       async function getWeatherForecast() {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=70bc25d3e4890dca2504be5f7be8fa8c`
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=70bc25d3e4890dca2504be5f7be8fa8c`
         );
         const data = await res.json();
         // console.log(data);
