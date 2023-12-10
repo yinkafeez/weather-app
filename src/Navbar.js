@@ -6,15 +6,10 @@ export default function Navbar() {
         <li className="nav-web-name-li">
           <img src={img} alt="img" height={55} width={60} />
           <p>
-            Weather<em>Service</em>
+            Weather<em>whisperer</em>
           </p>
         </li>
       </ul>
-      {/* <ul className="nav-weather-links-ul">
-        <li className="nav-weather-links-li"> Current Weather </li>
-        <li className="nav-weather-links-li"> Galllery </li>
-        <li className="nav-weather-links-li"> Contacts </li>
-      </ul> */}
     </div>
   );
 }
