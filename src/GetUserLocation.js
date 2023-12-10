@@ -16,7 +16,7 @@ export default function GetUserLocation({ setUserLocation }) {
             try {
               const response = await fetch(reverseGeocodingApi);
               const data = await response.json();
-              console.log(data);
+              // console.log(data);
 
               // Extract the city name from the response
               const cityName =
@@ -24,7 +24,7 @@ export default function GetUserLocation({ setUserLocation }) {
                 data.results[0]?.components.town ||
                 data.results[0]?.components.state;
 
-              setUserLocation(cityName || "Unknown");
+              setUserLocation(cityName || "");
             } catch (error) {
               console.error("Error fetching location:", error);
               setUserLocation("Unknown");
