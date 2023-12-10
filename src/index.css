@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* top: 0;
+  left: 0; */
+}
+body {
+  font-family: arial;
+}
+
+/* navbar, search box, weather forecast style */
+.top-section {
+  background-image: url("./img/background.gif");
+  background-position: fit-content;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+/* on smaller screen */
+@media screen and (max-width: 992px) {
+  .top-section {
+    height: 100%;
+  }
+}
+
+/* navbar style */
+.navbar {
+  background: #eee;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  padding: 1.2rem;
+}
+.nav-web-name-li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1rem;
+  padding-left: 4rem;
+}
+.nav-web-name-li p {
+  font-weight: 600;
+  font-size: 25px;
+  color: #3b3a3a;
+  padding-top: 18px;
+}
+.nav-web-name-li p em {
+  color: blue;
+}
+/* on smaller screen */
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 0.2rem;
+  }
+}
+
+/* search and weather forecast container style */
+.search-weather-forecast-container {
+  display: grid;
+  grid-template-columns: 2.3fr 1.7fr;
+  grid-gap: 0.3rem;
+}
+/* on smaller screen */
+@media screen and (max-width: 992px) {
+  .search-weather-forecast-container {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-gap: 0.3rem;
+  }
+}
+
+/* search box style */
+.weather-search-box {
+  padding-top: 14rem;
+  padding-left: 5rem;
+}
+.weather-search-box input {
+  width: 77%;
+  height: 45px;
+  background-color: #dffdf9;
+  border: none;
+  padding-left: 20px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.weather-search-box input::placeholder {
+  font-size: 20px;
+}
+
+.weather-search-box button {
+  width: 15%;
+  height: 45px;
+  border: none;
+  background-color: #0650f0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  margin-left: -4px;
+}
+/* on smaller screen */
+@media screen and (min-width: 515px) and (max-width: 992px) {
+  .weather-search-box {
+    padding-top: 1rem;
+    text-align: center;
+    padding-left: 0rem;
+  }
+}
+@media screen and (max-width: 515px) {
+  .weather-search-box {
+    padding-top: 1rem;
+    text-align: center;
+    padding-left: 0rem;
+  }
+  .weather-search-box input {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .weather-search-box button {
+    font-size: 15px;
+    width: 17%;
+  }
+}
+
+/* weather forecast style */
+.weather-forecast-container {
+  margin-top: 7rem;
+  color: #fff;
+  background-color: #000;
+  width: 77%;
+  height: 300px;
+  border-radius: 10px;
+  padding: 1rem;
+  opacity: 0.81;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+.error {
+  margin-top: 12rem;
+  color: red;
+  background-color: #000;
+  width: 77%;
+  border-radius: 10px;
+  padding: 3rem;
+  opacity: 0.81;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+}
+.city-name {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.curDate {
+  font-weight: 400;
+  font-size: 16px;
+}
+.weather-forecast {
+  font-size: 55px;
+  font-weight: 800;
+  padding-top: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.weather-description {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 5rem;
+  text-align: center;
+}
+.weather-properties-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1.15fr 1.35fr;
+  grid-gap: 12px;
+  text-align: center;
+}
+
+/* on smaller screen */
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+  .weather-forecast-container {
+    margin: 3rem;
+  }
+  .error {
+    margin-top: 8rem;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 515px) and (max-width: 992px) {
+  .weather-forecast-container {
+    margin: 3rem auto;
+  }
+  .error {
+    margin: 8rem auto;
+    padding: 2rem;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 515px) {
+  .weather-forecast-container {
+    width: 70%;
+    margin: 3rem auto;
+    padding-bottom: 4rem;
+  }
+  .error {
+    margin: 8rem auto;
+    padding: 2rem;
+    width: 65%;
+  }
+}
+@media screen and (max-width: 322px) {
+  .weather-forecast {
+    font-size: 50px;
+  }
+  .weather-properties-container {
+    font-size: 15px;
+  }
+  .error {
+    margin: 8rem auto;
+    padding: 1rem;
+    width: 60%;
+    font-size: 15px;
+  }
+}
