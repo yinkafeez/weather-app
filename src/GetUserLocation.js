@@ -27,17 +27,17 @@ export default function GetUserLocation({ setUserLocation }) {
               setUserLocation(cityName || "");
             } catch (error) {
               console.error("Error fetching location:", error);
-              setUserLocation("Unknown");
+              setUserLocation("");
             }
           },
           (error) => {
             console.error("Error getting location:", error);
-            setUserLocation("Unknown");
+            setUserLocation("");
           }
         );
       } else {
         console.error("Geolocation is not supported by your browser");
-        setUserLocation("Unknown");
+        setUserLocation("");
       }
     };
 
